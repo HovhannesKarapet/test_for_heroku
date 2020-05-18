@@ -1,0 +1,14 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">{{'CLIENT.CALL_WAITER' | translate | titlecase}}</h5>
+    <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+<!--  <div class="modal-body">-->
+<!--  </div>-->
+  <div class="modal-footer d-flex justify-content-around">
+    <button class="btn btn-success" (click)="callWaiter()">{{'COMMON.YES' | translate | titlecase}}</button>
+    <button class="btn btn-danger" (click)="activeModal.dismiss('NO')">{{'COMMON.NO' | translate | titlecase}}</button>
+  </div>
+</div>

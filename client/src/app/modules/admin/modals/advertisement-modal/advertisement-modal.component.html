@@ -1,0 +1,45 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">{{'Add ADS'|titlecase}}</h4>
+    <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <!--    errors-->
+      <div class="col-12 text-right">
+        <p class="error" *ngFor="let error of errors">*{{error}}</p>
+        <p class="error" *ngIf="form.get('importFile').touched && form.get('importFile').invalid">
+          *Image is required</p>
+        <p class="error" *ngIf="form.get('name').touched && form.get('name').invalid">*name is required</p>
+        <p class="error" *ngIf="form.get('size').touched && form.get('size').invalid">*size is required</p>
+      </div>
+      <div class="col-12">
+        <form novalidate [formGroup]="form">
+          <div class="form-group mb-3">
+
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" multiple formControlName="importFile" id="importFile"
+                     accept="image/x-png,image/gif,image/jpeg"
+                     (change)="onFileChange($event.target.files)">
+              <label class="custom-file-label" #labelImport for="importFile">
+                <fa name="search"></fa>
+                Choose Image
+              </label>
+            </div>
+            <input type="text" class="form-control" placeholder="Name" formControlName="name">
+            <input type="text" class="form-control" placeholder="Size" formControlName="size">
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn_red" (click)="addADS()">
+        Add Category
+        <fa name="plus" *ngIf="!onload"></fa>
+        <fa name="spinner" animation="spin" *ngIf="onload"></fa>
+      </button>
+    </div>
+  </div>
+</div>

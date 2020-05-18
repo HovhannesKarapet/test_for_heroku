@@ -1,0 +1,30 @@
+<div class="container-fluid app_background">
+  <div class="row">
+    <div class="col-6 offset-3 advertising text-center">
+      <app-advertisement size="sm"></app-advertisement>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center mt-3">
+      <h4>{{'CLIENT.WORDS_OF_FAREWELL' | translate}}</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 offset-3 full_height vertical_center text-center">
+      <app-advertisement size="lg"></app-advertisement>
+    </div>
+    <div class="col-3 full_height vertical_center text-center">
+      <app-advertisement size="md"></app-advertisement>
+    </div>
+  </div>
+  <div class="fixed d-flex justify-content-center">
+      <div class="form">
+        <input type="password" class="form-control" [(ngModel)]="password" placeholder="{{'AUTH.PASSWORD' | translate | titlecase }}">
+        <div class="text-right">
+          <button class="btn" (click)="logout()">{{'AUTH.SIGN_OUT' | translate | titlecase}}
+            <fa name="spinner" animation="spin" *ngIf="onload"></fa>
+          </button>
+        </div>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+@import "../../../../../../assets/scss/variables";
+
+.btn {
+  border-radius: 10px;
+}
+.red_btn {
+  color: $danger
+}
+.total-price {
+  padding: 0 2rem;
+}
+.service_fee {
+  border-top: 1px solid #bdbdbd;
+  padding-top: 10px;
+  font-size: 12px;
+  color: gray
+}

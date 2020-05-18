@@ -1,0 +1,71 @@
+@import "../../../../../assets/scss/variables";
+
+.bar_nav {
+  display: flex;
+  justify-content: center;
+  background-color: $black;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.nav_logo {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 10px;
+}
+
+.logout {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.nav_item {
+  position: relative;
+  text-align: center;
+  padding: 5px 10px;
+  color: $white;
+  cursor: pointer;
+
+  &:last-child {
+    border-right: none;
+    border-left: 1px solid $white;
+  }
+
+  &:nth-last-child(2) {
+    border-right: none;
+    border-left: 1px solid $white;
+  }
+}
+
+.count {
+  position: absolute;
+  bottom: 0;
+
+  height: 20px;
+  width: 20px;
+
+  line-height: 20px;
+
+  color: $white;
+  border-radius: 100%;
+}
+
+.busy {
+  right: calc(0% + 5px);
+  background-color: $danger;
+  transform: translate(0px, 20px);
+}
+
+.free {
+  left: calc(0% + 5px);
+  background-color: $success;
+  transform: translate(0px, 20px);
+}
+
+.ordered {
+  left: calc(50% - 10px);
+  background-color: $warning;
+  transform: translate(0px, 20px);
+}

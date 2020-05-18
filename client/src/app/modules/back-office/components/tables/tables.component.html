@@ -1,0 +1,14 @@
+<div class="container-fluid">
+  <div class="d-flex justify-content-between">
+    <h3>{{'BAR.TABLES' | translate | titlecase}}</h3>
+    <p class="status status_free">{{'BAR.FREE' | translate}}</p>
+    <p class="status status_ordered">{{'BAR.ORDERED' | translate}}</p>
+    <p class="status status_busy">{{'BAR.BUSY' | translate}}</p>
+  </div>
+  <div class="mx-5 my-3 full_height">
+    <div [ngClass]="{'_table': true, '_table_busy': table.value.loggedIn, '_table_free': !table.value.loggedIn, '_table_ordered': table.value.reserved, 'blink': table.value.blink}"
+         *ngFor="let table of tables | keyvalue" (click)="openOrder(table.key)">
+      <h3 class="_table_count">{{table.value.login}}</h3>
+    </div>
+  </div>
+</div>

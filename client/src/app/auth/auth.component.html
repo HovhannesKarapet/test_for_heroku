@@ -1,0 +1,50 @@
+<div class="container-fluid app_background">
+  <div class="d-flex justify-content-between p-3 navigation">
+    <div class="logo">
+      <img class="img-fluid" src="../../assets/images/logo.png" alt="">
+    </div>
+    <div>
+      <a *ngFor="let lang of language.languages; let i = index" class="lang_selector"
+         (click)="language.changeLanguage(lang.loc, i)">
+        <img src="{{lang.icon}}" alt="{{language.selected_language.loc}}" class="img-fluid">
+      </a>
+    </div>
+  </div>
+
+
+  <div class="d-flex justify-content-center align-items-center m-0 form">
+    <div class="card" style="width: 50%; max-width: 300px">
+      <div class="card-body">
+        <div class="header">
+          <div class="card-title text-center">
+            <h5>{{'COMMON.WELCOME' | translate | titlecase}}</h5>
+<!--            <span>{{'COMMON.TO_CAFE_NAME' | translate}}</span>-->
+          </div>
+        </div>
+        <div class="text-right">
+          <p class="error" *ngIf="error">*{{error}}</p>
+          <p class="error" *ngIf="form.get('login').touched && form.get('login').errors?.required">*{{'ERROR.LOGIN' | translate}}</p>
+          <p class="error" *ngIf="form.get('password').touched && form.get('password').errors?.required">*{{'ERROR.PASSWORD' | translate}}</p>
+          <p class="error" *ngIf="form.get('password').touched && form.get('password').errors?.minlength">*{{'ERROR.MIN_LENGTH' | translate}}</p>
+        </div>
+        <form [formGroup]="form" (ngSubmit)="login()">
+          <div class="row">
+            <div class="col-12">
+              <input type="text" class="form-control" [ngClass]="{'form_control_error': (form.get('login').invalid && form.get('login').touched)}"
+                     placeholder="{{'COMMON.TABLE' | translate | titlecase}}" formControlName="login">
+            </div>
+            <div class="col-12">
+              <input type="password" class="form-control"  [ngClass]="{'form_control_error': (form.get('password').invalid && form.get('password').touched)}"
+                     placeholder="{{'AUTH.PASSWORD' | translate | titlecase}}" formControlName="password">
+            </div>
+          </div>
+          <div class="text-center">
+            <button class="btn btn-lg" type="submit">{{'AUTH.SIGN_IN' | translate | titlecase }}
+              <fa name="spinner" animation="spin" *ngIf="onload"></fa>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

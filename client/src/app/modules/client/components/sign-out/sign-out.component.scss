@@ -1,0 +1,24 @@
+.advertising {
+  height: 60px;
+}
+.form-control {
+  background: none;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.fixed {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+}
+.form {
+  max-width: 300px;
+}
+.full_height {
+  height: calc(100vh - 250px);
+  width: 100%;
+  overflow-y: scroll;
+}
+.vertical_center {
+  line-height: calc(100vh - 250px);
+}

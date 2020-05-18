@@ -1,0 +1,79 @@
+{
+  "COMMON": {
+    "TOTAL": "total",
+    "AMD": "AMD",
+    "CONFIRM": "confirm",
+    "TABLE": "table's number",
+    "TABLES": "tables",
+    "YES": "yes",
+    "NO": "no",
+    "WELCOME": "welcome",
+    "TO_CAFE_NAME": "to atmosphere cafe",
+    "MENU": "մենյու"
+  },
+  "AUTH": {
+    "SIGN_IN": "sign in",
+    "SIGN_OUT": "sign out",
+    "PASSWORD": "password"
+  },
+  "ADMIN": {
+  },
+  "BAR": {
+    "TABLES": "tables",
+    "ORDERS": "orders",
+    "TAKE_THE_BILL": "take the bill",
+    "FREE": "free",
+    "ORDERED": "ordered",
+    "BUSY": "busy",
+    "NEW": "new",
+    "ACCEPTED": "accepted",
+    "SPECIAL_NOTES": "special notes",
+    "NOTIFICATIONS": "notifications",
+    "CALL": "call"
+  },
+  "CLIENT": {
+    "SEARCH": "search",
+    "SEARCH_RESULTS": "search results",
+    "WORDS_OF_FAREWELL": "Thank you for choosing our Cafe",
+    "WATCH": "watch",
+    "ORDERS": "orders",
+    "CONFIRM_ORDER": "confirm the order",
+    "MAKE_ORDER": "make order",
+    "INGREDIENTS": "ingredients",
+    "ADDITIONAL_INFORMATION": "additional information",
+    "CART": "cart",
+    "WAITER": "call waiter",
+    "CALL_WAITER": "call the waiter?",
+    "MY_BILL": "my bill",
+    "HOME": "home",
+    "WANT_BILL": "bring my bill",
+    "RESERVE": "reserve",
+    "CANCEL_RESERVATION": "cancel reservation",
+    "BEST_SELLERS": "special offers"
+  },
+  "ERROR": {
+    "LOGIN": "table number required",
+    "PASSWORD": "password required",
+    "MIN_LENGTH": "the password must be at least 6 characters long"
+  },
+  "PAYMENT": {
+    "SERVICE_FEE": "service fee",
+    "CHOOSE_PAYMENT_METHOD": "choose payment method",
+    "PAY": "pay",
+    "CASH": "cash",
+    "WITH_CARD": "with card",
+    "IDRAM": "idram",
+    "INECOPAY": "inecoPay"
+  },
+  "RATE": {
+    "APP_RATE": "rate our application",
+    "CAFE_SERVICE_RATE": "rate cafe service",
+    "FOOD_RATE": "rate food"
+  },
+  "CONTACT": {
+    "ABOUT_US": "about us",
+    "ADDRESS": "address",
+    "EMAIL": "E-mail",
+    "PHONE": "phone"
+  }
+}

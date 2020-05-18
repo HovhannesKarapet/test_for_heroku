@@ -1,0 +1,42 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">{{_data.name|titlecase}}</h5>
+    <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <div class="col-12 text-right">
+        <p class="error" *ngFor="let error of errors">*{{error}}</p>
+        <p class="error" *ngIf="form.get('role').touched && form.get('role').invalid && !_data.user">*role is required</p>
+        <p class="error" *ngIf="form.get('login').touched && form.get('login').invalid && !_data.user">*login is required</p>
+        <p class="error" *ngIf="form.get('password').touched && form.get('password').errors?.required && !_data.user">*password is required</p>
+        <p class="error" *ngIf="form.get('password').touched && form.get('password').errors?.minlength">*min 6 letters</p>
+      </div>
+      <div class="col-12">
+        <form novalidate [formGroup]="form">
+          <select class="form-control d-inline-block" formControlName="role">
+            <option *ngFor="let role of _data.roles" value="{{role._id}}">{{role.name}}</option>
+          </select>
+
+          <input type="text" class="form-control" placeholder="Login" formControlName="login">
+
+          <input type="password" class="form-control" placeholder="password" formControlName="password">
+        </form>
+      </div>
+    </div>
+
+  </div>
+  <div class="modal-footer d-flex justify-content-between">
+    <button type="button" class="btn btn-secondary"  (click)="activeModal.dismiss('Close-btn click')">Close</button>
+    <button type="button" class="btn btn-primary" *ngIf="!_data.flag" (click)="add()">Add User
+      <fa name="plus" *ngIf="!onload"></fa>
+      <fa name="spinner" animation="spin" *ngIf="onload"></fa>
+    </button>
+    <button type="button" class="btn btn-primary" *ngIf="_data.flag" (click)="update()">Change User
+      <fa name="check" *ngIf="!onload"></fa>
+      <fa name="spinner" animation="spin" *ngIf="onload"></fa>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">{{'CLIENT.CART' | translate | titlecase}}</h5>
+    <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="d-flex justify-content-between align-items-center" *ngFor="let order of orders; let i = index">
+      <span>{{order.name | language:language.selected_language.loc}}</span>
+      <div>
+        <span>{{order.price}}{{'COMMON.AMD' | translate}} x{{order.count}}</span>
+        <button class="btn red_btn" (click)="remove(i)">
+          <fa name="trash" size="lg"></fa>
+        </button>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between service_fee">
+      <span>{{'PAYMENT.SERVICE_FEE' | translate}}</span>
+      <span>(10%) {{service_fee}}{{'COMMON.AMD' | translate}}</span>
+    </div>
+  </div>
+  <div class="total-price d-flex justify-content-between">
+    <h5>{{'COMMON.TOTAL' | translate | titlecase}}</h5>
+    <h5>{{total}}{{'COMMON.AMD' | translate}}</h5>
+  </div>
+  <div class="modal-footer d-flex justify-content-around">
+    <button class="btn btn-success" (click)="confirmOrder()">{{'CLIENT.CONFIRM_ORDER' | translate | titlecase}}</button>
+  </div>
+</div>

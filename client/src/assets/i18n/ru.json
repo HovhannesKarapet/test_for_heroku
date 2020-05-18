@@ -1,0 +1,79 @@
+{
+  "COMMON": {
+    "TOTAL": "ընդհանուր",
+    "AMD": "драм",
+    "CONFIRM": "подтвердить",
+    "TABLE": "столик",
+    "TABLES": "столики",
+    "YES": "да",
+    "NO": "нет",
+    "WELCOME": "добро пожаловать",
+    "TO_CAFE_NAME": "в кафе Атмасфер",
+    "MENU": "меню"
+  },
+  "AUTH": {
+    "SIGN_IN": "Войти",
+    "SIGN_OUT": "Выйти",
+    "PASSWORD": "пароль"
+  },
+  "ADMIN": {
+  },
+  "BAR": {
+    "TABLES": "столики",
+    "ORDERS": "заказы",
+    "TAKE_THE_BILL": "отнести счет",
+    "FREE": "свободный",
+    "ORDERED": "забронированный",
+    "BUSY": "занятый",
+    "NEW": "новые",
+    "ACCEPTED": "принятые",
+    "SPECIAL_NOTES": "специальные заметки",
+    "NOTIFICATIONS": "уведомления",
+    "CALL": "вызов"
+  },
+  "CLIENT": {
+    "SEARCH": "поиск",
+    "SEARCH_RESULTS": "результаты поиска",
+    "WORDS_OF_FAREWELL": "Спасибо за визит, хорошего вам дня",
+    "WATCH": "посмотреть",
+    "ORDERS": "заказы",
+    "CONFIRM_ORDER": "подтвердить заказ",
+    "MAKE_ORDER": "заказать",
+    "INGREDIENTS": "состав",
+    "ADDITIONAL_INFORMATION": "добавить информацию",
+    "CART": "корзина",
+    "WAITER": "официант",
+    "CALL_WAITER": "позвать официант?",
+    "MY_BILL": "мой счет",
+    "HOME": "домой",
+    "WANT_BILL": "попросить счет",
+    "RESERVE": "забронировать",
+    "CANCEL_RESERVATION": "отменить бронь",
+    "BEST_SELLERS": "специальные предложения"
+  },
+  "ERROR": {
+    "LOGIN": "номер столика обязателен",
+    "PASSWORD": "пароль обязателен",
+    "MIN_LENGTH": "пароль должен быть не менее 6 символов"
+  },
+  "PAYMENT": {
+    "SERVICE_FEE": "плата за обслуживание",
+    "CHOOSE_PAYMENT_METHOD": "выберите метод оплаты",
+    "PAY": "оплатить",
+    "CASH": "наличные",
+    "WITH_CARD": "картой",
+    "IDRAM": "idram",
+    "INECOPAY": "inecoPay"
+  },
+  "RATE": {
+    "APP_RATE": "оцените удобство нашего приложения",
+    "CAFE_SERVICE_RATE": "оцените работу кафе",
+    "FOOD_RATE": "оценить качество пищи"
+  },
+  "CONTACT": {
+    "ABOUT_US": "о нас",
+    "ADDRESS": "адрес",
+    "EMAIL": "почта",
+    "PHONE": "телефон"
+  }
+}

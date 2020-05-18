@@ -1,0 +1,43 @@
+<div class="container-fluid full_height">
+  <div class="accordion">
+    <div class="card" *ngFor="let table of accepted_orders | keyvalue; let i = index">
+      <div class="card-header">
+        <div class="mb-0 pointer d-flex justify-content-between" (click)="collapse_array[i] = !collapse_array[i]"
+             [attr.aria-expanded]="!collapse_array[i]">
+          <h5>{{'COMMON.TABLE' | translate | titlecase}} {{table.key}}.</h5>
+          <i class="arrow" [@arrow]="collapse_array[i] ? 'up' : 'down'"></i>
+        </div>
+      </div>
+
+      <div [@expandCollapse]="collapse_array[i] ? 'closed' : 'open'">
+        <div class="card-body">
+          <div *ngFor="let item of table.value">
+            <div class="row">
+              <div class="col-4">
+                <span>{{item.name | language:language.selected_language.loc}}</span>
+              </div>
+              <div class="col-4 text-center">
+                <span>x{{item.count}}</span>
+              </div>
+              <div class="col-4 text-right">
+                <span>{{item.price}} {{'COMMON.AMD' | translate}}</span>
+              </div>
+              <div class="col-12">
+                <span *ngIf="item.instruction">{{'BAR.SPECIAL_NOTES' | translate}}: {{item.instruction}}</span>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <div class="d-flex justify-content-between service_fee">
+            <span>{{'PAYMENT.SERVICE_FEE' | translate}} (10%)</span>
+            <span>{{table.value.service_fee}}{{'COMMON.AMD' | translate}}</span>
+          </div>
+          <div class="d-flex justify-content-between">
+            <span>{{'COMMON.TOTAL' | translate}}</span>
+            <span>{{table.value.total_price}}{{'COMMON.AMD' | translate}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

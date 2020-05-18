@@ -1,0 +1,22 @@
+<div class="nav_logo">
+  <img src="../../../../../assets/images/logo.png" class="img-fluid" alt="">
+</div>
+<div class="bar_nav">
+  <div class="nav_item" [routerLink]="['/back_office', 'tables']">
+    <div *ngIf="busy_tables$ | async" class="count busy">{{busy_tables$ | async}}</div>
+    <div *ngIf="free_tables$ | async" class="count free">{{free_tables$ | async}}</div>
+    <div *ngIf="reserved_tables$ | async" class="count ordered">{{reserved_tables$ | async}}</div>
+    <a>{{'BAR.TABLES' | translate}}</a>
+  </div>
+  <div class="nav_item" [routerLink]="['/back_office', 'orders']">
+    <a>{{'BAR.ORDERS' | translate}}</a>
+  </div>
+  <div class="nav_item" [routerLink]="['/back_office', 'bill']">
+    <div *ngIf="bill_count$ | async" class="count busy">{{bill_count$ | async}}</div>
+    <a>{{'BAR.TAKE_THE_BILL' | translate}}</a>
+  </div>
+</div>
+<button class="btn logout" (click)="logout()">
+  <span>sign out </span>
+  <fa name="sign-out"></fa>
+</button>

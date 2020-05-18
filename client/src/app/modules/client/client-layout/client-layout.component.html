@@ -1,0 +1,23 @@
+<div class="container-fluid app_background" #content>
+  <div class="row">
+    <div class="col-12" *ngIf="!flag">
+      <app-navbar></app-navbar>
+    </div>
+    <div class="col-12" *ngIf="!flag">
+      <div class="row">
+        <div class="col-9 full_height">
+          <router-outlet></router-outlet>
+        </div>
+        <div class="col-3 full_height vertical_center text-center">
+          <app-advertisement size="md"></app-advertisement>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 ads_height" *ngIf="flag">
+      <app-advertisement size="lg"></app-advertisement>
+    </div>
+    <div class="col-12 control_panel">
+      <app-control-panel></app-control-panel>
+    </div>
+  </div>
+</div>

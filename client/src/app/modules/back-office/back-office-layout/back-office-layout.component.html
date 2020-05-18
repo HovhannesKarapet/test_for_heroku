@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-9 col-lg-10">
+      <div class="row custom_nav mt-2">
+        <app-navbar></app-navbar>
+      </div>
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+    <div class="col-3 col-lg-2 full_height">
+      <div class="side_bar text-center">
+        <h5 class="mt-1">{{'BAR.NOTIFICATIONS' | translate | titlecase}}</h5>
+        <hr class="hr">
+        <div *ngFor="let call of waiter_calls | keyvalue">
+          <h4>{{'COMMON.TABLE' | translate | titlecase}} {{call.key}} {{'BAR.CALL' | translate | titlecase}}</h4>
+          <button class="btn btn-success" (click)="confirmWaiterCall(call.key)">OK</button>
+          <hr class="hr mt-2">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

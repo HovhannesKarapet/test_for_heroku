@@ -1,0 +1,37 @@
+<nav id="sidebar" #sidebar [ngClass]="{active: show_sidebar, scrollbar: true}">
+
+  <div class="sidebar-header">
+    <h3>My Waiter</h3>
+  </div>
+
+  <ul class="list-unstyled components">
+    <li *ngFor="let item of sidebar_items" routerLinkActive="ng active">
+      <a [routerLink]="['/admin', item.path_name]"
+         (click)="show_sidebar = !show_sidebar">{{item.name}}</a>
+    </li>
+  </ul>
+</nav>
+
+<nav class="navbar navbar-expand">
+  <div class="container-fluid d-flex justify-content-between">
+
+    <button type="button" #sidebarCollapse class="btn"
+            (click)="show_sidebar = !show_sidebar">
+      <fa name="bars"></fa>
+      <span> Dashboard</span>
+    </button>
+
+    <button class="btn" (click)="logout()">
+      <span>sign out </span>
+      <fa name="sign-out"></fa>
+    </button>
+  </div>
+</nav>
+<div class="container content">
+  <div class="row">
+    <div class="col-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+

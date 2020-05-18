@@ -1,0 +1,28 @@
+<div class="modal-content">
+  <div class="modal-body">
+    <button type="button" class="close" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <p>{{'RATE.APP_RATE' | translate }}</p>
+    <ngb-rating [(rate)]="app_rate" max="5" class="ml-5 mb-2">
+      <ng-template let-fill="fill" let-index="index">
+        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+      </ng-template>
+    </ngb-rating>
+    <p>{{'RATE.CAFE_SERVICE_RATE'| translate}}</p>
+    <ngb-rating [(rate)]="cafe_service_rate" max="5"  class="ml-5 mb-2">
+      <ng-template let-fill="fill" let-index="index">
+        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+      </ng-template>
+    </ngb-rating>
+    <p>{{'RATE.FOOD_RATE' | translate}}</p>
+    <ngb-rating [(rate)]="food_rate" max="5"  class="ml-5 mb-2">
+      <ng-template let-fill="fill" let-index="index">
+        <span class="star" [class.filled]="fill === 100">&#9733;</span>
+      </ng-template>
+    </ngb-rating>
+    <div class="text-center mt-3">
+      <button class="btn btn-dark" (click)="confirm()">{{'COMMON.CONFIRM' | translate | titlecase }}</button>
+    </div>
+  </div>
+</div>

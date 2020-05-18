@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class=" d-flex justify-content-center mb-2">
+  <div class="bar_nav">
+    <div class="nav_item" [routerLink]="['/back_office/orders', 'new']">
+      <a>{{'BAR.NEW' | translate}}</a>
+    </div>
+    <div class="nav_item" [routerLink]="['/back_office/orders', 'accepted']">
+      <a>{{'BAR.ACCEPTED' | translate}}</a>
+    </div>
+  </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,66 @@
+@import "../../../../../assets/scss/variables";
+
+.full_height {
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
+}
+.status {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    transform: translate(-30px, 3px);
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+  }
+}
+
+.status_free {
+  &::before {
+    background-color: $success;
+  }
+}
+.status_ordered {
+  &::before {
+    background-color: $warning;
+  }
+}
+.status_busy {
+  &::before {
+    background-color: $danger;
+  }
+}
+._table {
+  display: inline-block;
+  position: relative;
+  height: 125px;
+  width: 125px;
+  margin: 5px;
+  cursor: pointer;
+}
+._table_count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
+  color: $white;
+}
+._table_free {
+  background-color: $success;
+}
+._table_ordered {
+  background-color: $warning !important;
+}
+._table_busy {
+  background-color: $danger;
+}
+.blink {
+  animation: blinking 0.8s infinite;
+}
+
+@keyframes blinking {
+  50%{ background-color: $warning}
+}

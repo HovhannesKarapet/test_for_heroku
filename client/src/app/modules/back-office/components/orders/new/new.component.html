@@ -1,0 +1,19 @@
+<div class="container-fluid full_height">
+  <div *ngFor="let table of new_orders | keyvalue" class="card" style="width: 18rem; overflow-y: scroll">
+    <div class="card-body px-0">
+      <h6 class="card-subtitle text-center mb-2">{{'COMMON.TABLE' | translate}} {{table.key}}</h6>
+      <ul class="list-group">
+        <li *ngFor="let order of table.value" class="list-group-item border-0">
+          <div class="d-flex justify-content-between">
+            <span>{{order.name | language:language.selected_language.loc}}</span>
+            <span>x{{order.count}}</span>
+          </div>
+          <span *ngIf="order.instruction">{{'BAR.SPECIAL_NOTES' | translate}}: {{order.instruction}}</span>
+        </li>
+      </ul>
+    </div>
+    <div class="card-footer text-center">
+      <button class="btn btn-success" (click)="confirm(table.key)">{{'COMMON.CONFIRM' | translate}}</button>
+    </div>
+  </div>
+</div>

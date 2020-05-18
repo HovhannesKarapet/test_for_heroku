@@ -1,0 +1,26 @@
+.custom_nav {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+.content {
+  height: calc(100vh - 100px);
+  margin-top: 100px;
+}
+.full_height {
+  height: calc(100vh - 60px);
+  transform: translateY(60px);
+  padding: 20px 5px;
+}
+.side_bar {
+  border: 1px solid black;
+  height: 100%;
+  overflow-y: scroll;
+}
+.hr {
+  border: 1px solid black;
+  width: 60%;
+  margin-top: 0;
+}

@@ -1,0 +1,57 @@
+@import "../../../../../assets/scss/variables";
+
+.control {
+  position: relative;
+  height: 90px;
+  width: 90px;
+  cursor: pointer;
+  border-right: 1px solid $black;
+  &:last-child {
+    border-right: none;
+    border-left: 1px solid;
+  }
+  &:nth-last-child(2) {
+    border-right: none;
+    border-left: 1px solid;
+  }
+}
+.central_control {
+  height: 90px;
+  width: 120px;
+}
+.count {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 35px;
+  width: 35px;
+  transform: translateY(-15px);
+
+  line-height: 35px;
+
+
+  color: $white;
+  background-color: $danger;
+  border-radius: 100%;
+}
+.nav_logo {
+  height: 100px;
+  width: 100px;
+  line-height: 100px;
+  position: absolute;
+  left: 15px;
+  cursor: pointer;
+  img {
+    max-width: 100%;
+  }
+}
+
+img {
+  max-width: 65%;
+}
+p {
+  color: $black;
+  font-size: small;
+}
+

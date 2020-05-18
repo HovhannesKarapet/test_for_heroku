@@ -1,0 +1,50 @@
+@import "../../assets/scss/variables";
+.lang_selector, .info {
+  margin-left: 10px;
+  display: inline-block;
+  width: 45px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.info {
+  width: 35px;
+  margin-right: 15px;
+}
+
+.header {
+  margin-bottom: 50px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.logo {
+  height: 150px;
+  width: 150px;
+}
+
+.form, .navigation {
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.form {
+  height: 100vh;
+}
+.navigation {
+  z-index: 2;
+}
+
+.card {
+  background: none;
+  border-radius: 0;
+  border: none;
+}
+
+.form-control {
+  background: none;
+  border: none;
+  border-bottom: 1px solid $black;
+}

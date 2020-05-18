@@ -1,0 +1,79 @@
+{
+  "COMMON": {
+    "TOTAL": "ընդհանուր",
+    "AMD": "դր",
+    "CONFIRM": "հաստատել",
+    "TABLE": "սեղան",
+    "TABLES": "սեղաններ",
+    "YES": "այո",
+    "NO": "ոչ",
+    "WELCOME": "բարի գալուստ",
+    "TO_CAFE_NAME": "ատմոսֆեր սրճարան",
+    "MENU": "մենյու"
+  },
+  "AUTH": {
+    "SIGN_IN": "մուտք",
+    "SIGN_OUT": "դուրս գալ",
+    "PASSWORD": "գաղտնաբառ"
+  },
+  "ADMIN": {
+  },
+  "BAR": {
+    "TABLES": "սեղաններ",
+    "ORDERS": "պատվերներ",
+    "TAKE_THE_BILL": "տանել հաշիվը",
+    "FREE": "ազատ",
+    "ORDERED": "պատվիրված",
+    "BUSY": "զբաղված",
+    "NEW": "նոր",
+    "ACCEPTED": "ընդունված",
+    "SPECIAL_NOTES": "հատուկ նշումներ",
+    "NOTIFICATIONS": "ազդանշաններ",
+    "CALL": "կանչ"
+  },
+  "CLIENT": {
+    "SEARCH": "որոնում",
+    "SEARCH_RESULTS": "որոնման արդյունքները",
+    "WORDS_OF_FAREWELL": "Շնորհակաալություն մեր սրճարանից օգտվելու համար Մաղթում ենք ձեզ հաճելի օր",
+    "WATCH": "տեսնել",
+    "ORDERS": "պատվերներ",
+    "CONFIRM_ORDER": "հաստատել պատվերը",
+    "MAKE_ORDER": "պատվիրել",
+    "INGREDIENTS": "բաղադրություն",
+    "ADDITIONAL_INFORMATION": "ավելացնել հրահանգ",
+    "CART": "զամբյուղ",
+    "WAITER": "մատուցող",
+    "CALL_WAITER": "կանչե՞լ մատուցող",
+    "MY_BILL": "իմ հաշիվը",
+    "HOME": "սկիզբ",
+    "WANT_BILL": "ուզել հաշիվը",
+    "RESERVE": "զբաղեցնել",
+    "CANCEL_RESERVATION": "չեղարկել",
+    "BEST_SELLERS": "հատուկ առաջարկներ"
+  },
+  "ERROR": {
+    "LOGIN": "սեղանի համարը պարտադիր է",
+    "PASSWORD": "գաղտաբառը պարտադիր է",
+    "MIN_LENGTH": "գաղտնաբառի պետք է լինի առնվազն 6 նիշանի"
+  },
+  "PAYMENT": {
+    "SERVICE_FEE": "սպասարկման վճար",
+    "CHOOSE_PAYMENT_METHOD": "ընտրեք վճարման եղանակը",
+    "PAY": "վճարել",
+    "CASH": "կանխիկ",
+    "WITH_CARD": "քարտով",
+    "IDRAM": "idram",
+    "INECOPAY": "inecoPay"
+  },
+  "RATE": {
+    "APP_RATE": "գնահատեք մեր ծրագրի հարմարավետությունը",
+    "CAFE_SERVICE_RATE": "գնահատեք սրճարանի աշխատանքը",
+    "FOOD_RATE": "գնահատեք սննդի որակը"
+  },
+  "CONTACT": {
+    "ABOUT_US": "մեր մասին",
+    "ADDRESS": "հասցե",
+    "EMAIL": "էլ. հասցե",
+    "PHONE": "հեռախոս"
+  }
+}

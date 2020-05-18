@@ -1,0 +1,22 @@
+.category {
+  cursor: pointer;
+  img {
+    max-width: 65%;
+  }
+  p {
+    color: black;
+    font-size: small;
+    margin: 0;
+  }
+}
+.full_height {
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.best_seller {
+  cursor: pointer;
+  max-width: 65%;
+}

@@ -1,0 +1,16 @@
+.control_panel {
+  position: fixed;
+  bottom: 10px;
+}
+.full_height {
+  height: calc(100vh - 200px);
+  overflow-y: scroll;
+}
+.ads_height {
+  height: calc(100vh - 110px);
+  line-height: calc(100vh - 110px);
+  text-align: center;
+}
+.vertical_center {
+  line-height: calc(100vh - 200px);
+}

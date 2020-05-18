@@ -1,0 +1,21 @@
+@import "../../../../../assets/scss/variables";
+
+.bar_nav {
+  display: flex;
+  justify-content: center;
+  background-color: $black;
+  padding: 10px;
+  border-radius: 10px;
+}
+.nav_item {
+  position: relative;
+  text-align: center;
+  padding: 5px 10px;
+  color: $white;
+  cursor: pointer;
+
+  &:first-child {
+    border-right: 1px solid $white;
+  }
+}
+

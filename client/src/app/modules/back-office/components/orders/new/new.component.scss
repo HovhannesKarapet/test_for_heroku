@@ -1,0 +1,10 @@
+.full_height {
+  height: calc(100vh - 165px);
+  overflow-y: scroll;
+}
+.card {
+  display: inline-flex;
+  margin: 2px;
+  border: 2px solid black;
+  border-radius: 25px;
+}

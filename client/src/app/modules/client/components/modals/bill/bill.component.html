@@ -1,0 +1,47 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" *ngIf="!flag">{{'CLIENT.ORDERS' | translate | titlecase}}</h5>
+    <h5 class="modal-title" *ngIf="flag">{{'PAYMENT.CHOOSE_PAYMENT_METHOD' | translate | titlecase}}</h5>
+    <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body" *ngIf="!flag">
+    <div class="d-flex justify-content-between align-items-center" *ngFor="let order of orders">
+      <span>{{order.name | language:language.selected_language.loc}}</span>
+      <div>
+        <span>{{order.price}}{{'COMMON.AMD' | translate}} x{{order.count}}</span>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between service_fee">
+      <span>{{'PAYMENT.SERVICE_FEE' | translate}}</span>
+      <span>(10%) {{service_fee$ | async}}{{'COMMON.AMD' | translate}}</span>
+    </div>
+  </div>
+  <div *ngIf="!flag">
+    <div class="total-price d-flex justify-content-between">
+      <h5>{{'COMMON.TOTAL' | translate | titlecase}}</h5>
+      <h5>{{total_sum$ | async}}{{'COMMON.AMD' | translate}}</h5>
+    </div>
+    <div class="modal-footer d-flex justify-content-around">
+      <button class="btn btn-dark" (click)="flag = !flag">{{'PAYMENT.PAY' | translate | titlecase}}</button>
+    </div>
+  </div>
+  <div *ngIf="flag" class="modal-body">
+    <div class="row">
+      <div class="col-6 mb-3">
+        <button class="btn btn-dark btn-block" (click)="cash()">{{'PAYMENT.CASH' | translate | titlecase}}</button>
+      </div>
+      <div class="col-6 mb-3">
+        <button class="btn btn-dark btn-block"
+                (click)="with_card()">{{"PAYMENT.WITH_CARD" | translate | titlecase}}</button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-dark btn-block">{{"PAYMENT.IDRAM" | translate | titlecase}}</button>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-dark btn-block">{{"PAYMENT.INECOPAY" | translate | titlecase}}</button>
+      </div>
+    </div>
+  </div>
+</div>

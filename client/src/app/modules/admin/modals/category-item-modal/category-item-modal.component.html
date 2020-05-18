@@ -1,0 +1,86 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">{{_data.name|titlecase}}</h4>
+    <button type="button" class="close" (click)="activeModal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="row">
+      <!--    errors-->
+      <div class="col-12 text-right">
+        <p class="error" *ngFor="let error of errors">*{{error}}</p>
+        <p class="error" *ngIf="form.get('category_id').touched && form.get('category_id').invalid">
+          *Category is required</p>
+        <p class="error" *ngIf="form.get('importFile').touched && form.get('importFile').invalid && !_data.flag">
+          *Image is required</p>
+        <p class="error" *ngIf="form.get('name.am').touched && form.get('name.am').invalid">*name in Armenian is
+          required</p>
+        <p class="error" *ngIf="form.get('name.en').touched && form.get('name.en').invalid">*name in English is
+          required</p>
+        <p class="error" *ngIf="form.get('name.ru').touched && form.get('name.ru').invalid">*name in Russian is
+          required</p>
+        <p class="error" *ngIf="form.get('price').touched && form.get('price').errors?.required">*price is required</p>
+        <p class="error" *ngIf="form.get('price').touched && form.get('price').errors?.min">*price min is 0</p>
+        <p class="error" *ngIf="form.get('description.am').touched && form.get('description.am').invalid">*description in Armenian is
+          required</p>
+        <p class="error" *ngIf="form.get('description.en').touched && form.get('description.en').invalid">*description in English is
+          required</p>
+        <p class="error" *ngIf="form.get('description.ru').touched && form.get('description.ru').invalid">*description in Russian is
+          required</p>
+      </div>
+      <div class="col-12">
+        <form novalidate [formGroup]="form">
+          <div class="form-group mb-3">
+
+            <select class="form-control d-inline-block" formControlName="category_id">
+              <option *ngFor="let category of _data.categories" value="{{category._id}}">{{category.name.en}}</option>
+            </select>
+
+            <div class="custom-file">
+              <input type="file" class="custom-file-input" multiple formControlName="importFile" id="importFile"
+                     accept="image/x-png,image/gif,image/jpeg"
+                     (change)="onFileChange($event.target.files)">
+              <label class="custom-file-label" #labelImport for="importFile">
+                <fa name="search"></fa>
+                Choose Image
+              </label>
+            </div>
+
+            <div formGroupName="name">
+              <input type="text" class="form-control" placeholder="Name in Armenian" formControlName="am">
+              <input type="text" class="form-control" placeholder="Name in English" formControlName="en">
+              <input type="text" class="form-control" placeholder="Name in Russian" formControlName="ru">
+            </div>
+
+            <input type="number" min="0" class="form-control" placeholder="Price" formControlName="price">
+
+            <div formGroupName="description">
+              <input type="text" class="form-control" placeholder="Description in Armenian" formControlName="am">
+              <input type="text" class="form-control" placeholder="Description in English" formControlName="en">
+              <input type="text" class="form-control" placeholder="Description in Russian" formControlName="ru">
+            </div>
+
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="bestseller" formControlName="best_seller">
+              <label class="custom-control-label" for="bestseller">Best Seller</label>
+            </div>
+
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn_red" (click)="add()" *ngIf="!_data.flag">
+        Add Category
+        <fa name="plus" *ngIf="!onload"></fa>
+        <fa name="spinner" animation="spin" *ngIf="onload"></fa>
+      </button>
+      <button type="button" class="btn btn_red" (click)="update()" *ngIf="_data.flag">
+        Update Category
+        <fa name="check" *ngIf="!onload"></fa>
+        <fa name="spinner" animation="spin" *ngIf="onload"></fa>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,226 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+//@import "~bootstrap-material-design/dist/css/bootstrap-material-design.min.css";
+@import "~font-awesome/css/font-awesome.css";
+@import "assets/scss/variables";
+
+/*---------------------------------------------------
+    BODY
+---------------------------------------------------*/
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1.7em;
+}
+
+a,
+a:hover,
+a:focus {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s linear;
+}
+
+.btn {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.form-control {
+  border-radius: 0;
+  &:focus {
+    box-shadow: none;
+  }
+}
+.form_control_error {
+  border-bottom: 1px solid $danger !important;
+}
+.error {
+  color: $danger;
+  font-size: .9rem;
+  line-height: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.language_box {
+  height: 30px;
+  width: 30px;
+  z-index: 100;
+}
+.language-dropdown-menu {
+  min-width: 30px;
+  margin-top: 15px;
+  padding: 0;
+  border: none;
+  background: none;
+  .language-dropdown-menu-item {
+    margin-top: 10px;
+    padding: 0;
+    &:hover {
+      background: none;
+    }
+  }
+}
+
+.app_background {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  &::after {
+    content: "";
+    background-image: url('assets/images/bg-image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance:textfield;
+}
+/*---------------------------------------------------
+    Sidebar scroll
+---------------------------------------------------*/
+
+::-webkit-scrollbar-track
+{
+  background: none;
+}
+
+::-webkit-scrollbar
+{
+  width: 5px;
+}
+::-webkit-scrollbar-track-piece:start
+{
+  margin-top: 35px;
+}
+::-webkit-scrollbar-track-piece:end
+{
+  margin-bottom: 35px;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 15px;
+  background-color: #b7b7b7;
+}
+
+/*---------------------------------------------------
+    MODAL
+---------------------------------------------------*/
+
+.modal-holder .close {
+  padding: 0;
+  margin: 0;
+  &:focus {
+    outline: none;
+  }
+}
+.modal-header {
+  padding: 20px 15px 5px;
+}
+.modal-body {
+  padding: 2rem;
+}
+.modal-content {
+  border-radius: 30px;
+}
+.modal-dialog {
+  max-width: 400px;
+}
+/*---------------------------------------------------
+    MODAL HOLDER
+---------------------------------------------------*/
+
+.modal-holder{
+  animation-name: slideDownLarge;
+  animation-duration: 0.3s;
+
+}
+
+.modal-close {
+  animation-name: slideUpLarge;
+  animation-duration: 0.3s;
+}
+
+@keyframes example {
+  0%   {transform: scale(0.5)}
+  100% {transform: scale(1)}
+}
+
+@keyframes slideUpLarge {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+@keyframes slideDownLarge {
+  0% {
+    transform: translateY(100%);
+  }
+  70% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+.modal_lg .modal-dialog {
+  max-width: 550px;
+}
+
+/*---------------------------------------------------
+    POPOVER
+---------------------------------------------------*/
+.category_item_popover {
+  position: fixed !important;
+  left: 49% !important;
+  max-height: calc(90vh - 180px);
+  overflow-y: scroll;
+  border-radius: 20px;
+  transform: translateY(90px) !important;
+  border-top: 20px solid white;
+  border-bottom: 20px solid white;
+  box-shadow: 0 0 6px #4a4a4a;
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .category_item_popover {
+    left: 52% !important;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .category_item_popover {
+    left: 57% !important;
+    max-width: 200px;
+  }
+}
+
+.search_popover {
+  max-width: none;
+}

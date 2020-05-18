@@ -1,0 +1,33 @@
+<div class="nav_logo" placement="top-left" [ngbPopover]="popContent" popoverTitle="{{'CONTACT.ABOUT_US' | translate | titlecase}}">
+  <img src="../../../../../assets/images/logo.png" class="img-fluid" alt="">
+</div>
+
+<ng-template #popContent>
+    <p>{{'CONTACT.ADDRESS'|translate}}:</p>
+    <p>{{'CONTACT.EMAIL'|translate}}:</p>
+    <p>{{'CONTACT.PHONE'|translate}}:</p>
+</ng-template>
+
+<div class="d-flex justify-content-center">
+  <div class="control text-center" (click)="openCart()">
+    <div class="count" *ngIf="count$ | async"><span>{{count$ | async}}</span></div>
+    <img src="../../../../../assets/images/icons/cart.png" alt="cart">
+    <p>{{'CLIENT.CART' | translate | titlecase}}</p>
+  </div>
+  <div class="control text-center" (click)="callWaiter()">
+    <img src="../../../../../assets/images/icons/waiter.png" alt="waiter">
+    <p>{{'CLIENT.WAITER' | translate | titlecase}}</p>
+  </div>
+  <div class="central_control text-center">
+    <h5>{{'CLIENT.MY_BILL' | translate | titlecase}}</h5>
+    <h5>{{total_sum$ | async}} {{'COMMON.AMD' | translate}}</h5>
+  </div>
+  <div class="control text-center" [routerLink]="['/home/categories']">
+    <img src="../../../../../assets/images/icons/home.png" alt="home">
+    <p>{{'CLIENT.HOME' | translate | titlecase}}</p>
+  </div>
+  <div class="control text-center" (click)="wantBill()">
+    <img src="../../../../../assets/images/icons/money.png" alt="pay">
+    <p>{{'CLIENT.WANT_BILL' | translate | titlecase}}</p>
+  </div>
+</div>
